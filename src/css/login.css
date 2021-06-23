@@ -1,0 +1,9 @@
+.login {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background: rgb(199, 220, 106);
+    background: linear-gradient(90deg, rgba(199, 220, 106, 1) 0%, rgba(73, 160, 55, 1) 58%, rgba(28, 36, 69, 1) 98%);
+}

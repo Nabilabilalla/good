@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react'
+import Login from './componentes/login';
+import Menu from './componentes/menu';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    // eslint-disable-next-line no-unused-vars
+    const [conectado, setConectado] = useState(false);
+
+    const acceder = (estado) => {
+        setConectado(estado)
+    }
+    return (
+        conectado ? < Menu / > : < Login acceder = { acceder }
+        / >
+    );
 }
 
 export default App;
