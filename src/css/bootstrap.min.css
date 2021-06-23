@@ -517,7 +517,7 @@ mark {
 
 .img-thumbnail {
     padding: .25rem;
-    background-color: #fff;
+    background-color: rgb(255, 247, 247);
     border: 1px solid #dee2e6;
     border-radius: .25rem;
     max-width: 100%;
@@ -7820,7 +7820,7 @@ button.bg-dark:hover {
 
 .mt-5,
 .my-5 {
-    margin-top: 3rem!important
+    margin-top: 7rem!important
 }
 
 .mr-5,

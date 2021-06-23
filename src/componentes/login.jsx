@@ -1,6 +1,10 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useRef, useState } from 'react';
 import '../css/login.css';
+
+
+  
 
 const URL_LOGIN = "http://localhost/php/login.php";
 
@@ -21,7 +25,11 @@ const enviarData = async ( url, data )=> {
     return json;
 
 }
+// eslint-disable-next-line react/jsx-no-undef
 
+// eslint-disable-next-line no-unused-vars
+
+  
 export default function Login (props) {
     const [error, setError]= useState(null);
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -40,12 +48,15 @@ export default function Login (props) {
         props.acceder(respuestaJson.conectado);
         setError(respuestaJson.error);
     }
+// eslint-disable-next-line react/jsx-no-undef
+// eslint-disable-next-line no-unused-vars
 
 
     return(
         <div className="login">
             <div className="row">
               <div className="col-sm-4 offset-4 mt-5">
+          
                   <div className="card pt-5">
                       <div className="card-header text-center">
                           <h3> Connexion </h3>
@@ -86,13 +97,16 @@ export default function Login (props) {
 onClick={handleLogin}
 className="btn btn-info btn-lg btn-block "> Acceder </button>
 <div className="card-footer">
-    <span>mot de passe oublié</span> <a href="http://" >recuper</a>
+    <span> mot de passe</span> <a href="http://" >recuper</a>
 </div>
 
-                      </div>
+     </div>
                   </div>
               </div>
             </div>
+            
         </div>
+
+        
     )
 }
