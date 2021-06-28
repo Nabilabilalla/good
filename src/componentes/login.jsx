@@ -53,60 +53,61 @@ export default function Login (props) {
 
 
     return(
-        <div className="login">
-            <div className="row">
-              <div className="col-sm-4 offset-4 mt-5">
-          
-                  <div className="card pt-5">
-                      <div className="card-header text-center">
-                          <h3> Connexion </h3>
-                      </div>
-                      <div className="card-body">
-                      <div className="input-group mb-3">
-  <div className="input-group-prepend">
-    <span className="input-group-text" id="basic-addon1">📧</span>
-  </div>
-  <input type="email"
+        <div className="login">  
+            <img src="https://media-exp1.licdn.com/dms/image/C560BAQH5LkxIL0g8eQ/company-logo_200_200/0/1592320928009?e=2159024400&v=beta&t=alMTSNZROsl7CnS56FD7z1-aQQ5ySCVCU0ay3zbys5M" id="logo" alt="" />
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Connexion</h1>
+		
+			<span>Utilisez votre compte</span>
+            <input type="email"
    className="form-control" 
    placeholder="Email" 
    aria-label="email"
    aria-describedby="basic-addon1"
    ref={refEmail} />
-   
-</div>
-<div className="input-group mb-3">
-  <div className="input-group-prepend">
-    <span className="input-group-text" id="basic-addon2">🔒</span>
-  </div>
-  <input type="password" 
+			<input type="password" 
   className="form-control" 
   placeholder="Mot de passe" 
   aria-label="clave" 
   aria-describedby="basic-addon2" 
-  ref={refPassword}
-      />
-</div>
-{
+  ref={refPassword} />
+			
+            {
     error &&
     <div className=" alert alert-danger">
     {error}
 </div>
 }
-
-<button
-onClick={handleLogin}
-className="btn btn-info btn-lg btn-block "> Acceder </button>
 <div className="card-footer">
     <span> mot de passe</span> <a href="http://" >recuper</a>
 </div>
+			<button onClick={handleLogin}>connexion</button>
+		</form>
+        
+	</div>
+    
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Devenir partenaire !</h1>
+				<p>Vous souhaitez devenir partenaire de la société APTEED?</p>
+                <p>Rien de plus simple il vous suffit de remplir le formulaire afin que notre équipe puisse vous contacter</p>
+				<button class="ghost" id="signUp"  
+                >Formulaire</button>
+			</div>
+		</div>
+	</div>
+</div>
 
-     </div>
-                  </div>
-              </div>
-            </div>
+
             
         </div>
-
         
     )
 }
